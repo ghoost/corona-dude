@@ -158,7 +158,7 @@ export default function handleMovement(player) {
       case 40:
         return attemptMove("SOUTH");
       default:
-        console.log(e.keyCode);
+        console.log(e.keyCode, "x");
     }
   }
   window.addEventListener("keydown", e => {

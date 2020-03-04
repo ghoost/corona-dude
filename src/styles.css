@@ -1,5 +1,5 @@
 .world {
-  background-image: url("/tiles/grass.png");
+  background-image: url("/corona-dude/tiles/grass.png");
 }
 .map {
   box-sizing: border-box;
@@ -11,7 +11,7 @@
   float: left;
 }
 .corona {
-  background-image: url("/corona.png");
+  background-image: url("/corona-dude/corona.png");
 }
 .spiral {
   opacity: 0.5;
@@ -25,7 +25,7 @@
   top: 0%;
   left: 0%;
   z-index: -1;
-  background: url("/spiral.png") 0 0 repeat;
+  background: url("/corona-dude/spiral.png") 0 0 repeat;
   animation: rotate 5s linear infinite;
   filter: blur(1px);
 }
@@ -36,46 +36,46 @@
 }
 
 .cave {
-  background-image: url("/cave.png");
+  background-image: url("/corona-dude/cave.png");
 }
 .grave {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: 120px -120px;
 }
 .farm {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: 0px 400px;
 }
 .tree {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: 0px -40px;
 }
 .trees {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: -40px -40px;
 }
 .big-tree {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: -80px -40px;
 }
 .stone {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: -120px -40px;
 }
 .mountain-1 {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: 0 -140px;
 }
 .mountain-2 {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: -40px -140px;
 }
 .mountain-3 {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: 0 -180px;
 }
 .mountain-4 {
-  background-image: url("/tiles/pipo-map001.png");
+  background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: -40px -180px;
 }
 .player {
@@ -192,4 +192,47 @@
   transform: scale(5);
   opacity: 1;
   top: -3em;
+}
+
+.keypad {
+  display: none;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  position: fixed;
+}
+.keypad > button {
+  padding: 30px;
+}
+.keypad i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.keypad .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.keypad .left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.keypad .up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.keypad .down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+@media (pointer: none), (pointer: coarse) {
+  .keypad {
+    display: block;
+  }
 }
