@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/corona-dude/static/css/main.9fa3b510.chunk.css",
+    "main.css": "/corona-dude/static/css/main.f1fa2501.chunk.css",
     "main.js": "/corona-dude/static/js/main.57452ac4.chunk.js",
     "main.js.map": "/corona-dude/static/js/main.57452ac4.chunk.js.map",
     "runtime-main.js": "/corona-dude/static/js/runtime-main.c9c2c5ec.js",
@@ -8,16 +8,16 @@
     "static/js/2.1b6b7b77.chunk.js": "/corona-dude/static/js/2.1b6b7b77.chunk.js",
     "static/js/2.1b6b7b77.chunk.js.map": "/corona-dude/static/js/2.1b6b7b77.chunk.js.map",
     "index.html": "/corona-dude/index.html",
-    "precache-manifest.1104b7df837edb2fbb1c773f87e7e2fa.js": "/corona-dude/precache-manifest.1104b7df837edb2fbb1c773f87e7e2fa.js",
+    "precache-manifest.2c139ca5ed718b9c50fd5b7d9fdc5ccb.js": "/corona-dude/precache-manifest.2c139ca5ed718b9c50fd5b7d9fdc5ccb.js",
     "service-worker.js": "/corona-dude/service-worker.js",
-    "static/css/main.9fa3b510.chunk.css.map": "/corona-dude/static/css/main.9fa3b510.chunk.css.map",
+    "static/css/main.f1fa2501.chunk.css.map": "/corona-dude/static/css/main.f1fa2501.chunk.css.map",
     "static/js/2.1b6b7b77.chunk.js.LICENSE.txt": "/corona-dude/static/js/2.1b6b7b77.chunk.js.LICENSE.txt",
     "static/media/player_walk.png": "/corona-dude/static/media/player_walk.9f19440f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c9c2c5ec.js",
     "static/js/2.1b6b7b77.chunk.js",
-    "static/css/main.9fa3b510.chunk.css",
+    "static/css/main.f1fa2501.chunk.css",
     "static/js/main.57452ac4.chunk.js"
   ]
 }
