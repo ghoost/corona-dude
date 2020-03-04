@@ -1,0 +1,195 @@
+.world {
+  background-image: url("/tiles/grass.png");
+}
+.map {
+  box-sizing: border-box;
+  transition: all 1s ease-in;
+}
+
+.tile {
+  display: inline-flex;
+  float: left;
+}
+.corona {
+  background-image: url("/corona.png");
+}
+.spiral {
+  opacity: 0.5;
+  transform: scale(0.7);
+}
+.spiral::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background: url("/spiral.png") 0 0 repeat;
+  animation: rotate 5s linear infinite;
+  filter: blur(1px);
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cave {
+  background-image: url("/cave.png");
+}
+.grave {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: 120px -120px;
+}
+.farm {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: 0px 400px;
+}
+.tree {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: 0px -40px;
+}
+.trees {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: -40px -40px;
+}
+.big-tree {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: -80px -40px;
+}
+.stone {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: -120px -40px;
+}
+.mountain-1 {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: 0 -140px;
+}
+.mountain-2 {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: -40px -140px;
+}
+.mountain-3 {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: 0 -180px;
+}
+.mountain-4 {
+  background-image: url("/tiles/pipo-map001.png");
+  background-position: -40px -180px;
+}
+.player {
+  position: absolute;
+}
+.player .shadow {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform: translate(-130px, -130px);
+  animation: flash 10s infinite;
+}
+.player.animated {
+  animation: play 0.5s steps(8) infinite;
+}
+.player .shadow:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background: transparent;
+  transition: all 1s ease-in;
+}
+.player .shadow.animated:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  color: #fff;
+  padding-top: 1em;
+  background: rgba(255, 0, 0, 0.4);
+  position: absolute;
+  text-align: center;
+}
+@keyframes getHealth {
+  50% {
+    background: radial-gradient(
+      circle,
+      rgba(120, 0, 0, 0) 0%,
+      rgba(120, 0, 0, 0) 30%,
+      rgba(120, 120, 120, 1) 90%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle,
+      rgba(255, 0, 0, 0) 0%,
+      rgba(255, 0, 0, 0) 30%,
+      rgba(255, 255, 255, 1) 90%
+    );
+  }
+}
+
+@keyframes play {
+  100% {
+    background-position-x: 320px;
+  }
+}
+@keyframes flash {
+  50% {
+    filter: blur(50px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.game-over {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100px 0 0 -150px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  text-align: centerp;
+}
+.game-over > div {
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.game-over button {
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+.add-points {
+  position: absolute;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 2px 2px 9px #000000;
+  transition: all 1s ease-out;
+  transform: scale(0);
+  opacity: 0;
+  top: 0;
+}
+.add-points.animated {
+  transform: scale(5);
+  opacity: 1;
+  top: -3em;
+}
