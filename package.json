@@ -1,11 +1,13 @@
 {
-  "name": "dungeon-crawler",
+  "homepage": "https://ghoost.github.io/corona-dude",
+  "name": "corona-dude",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "gh-pages": "^2.2.0",
     "immer": "^5.3.6",
     "react": "^16.12.0",
     "react-addons-update": "^15.6.2",
@@ -15,6 +17,8 @@
     "redux": "^4.0.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "set PORT=3005 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
