@@ -32,6 +32,7 @@ function Player(props) {
   };
   return (
     <div
+      id="player"
       className={`player ${animated ? "animated" : ""}`}
       style={{
         transition: "top 0.5s linear, left 0.5s linear",
@@ -52,7 +53,10 @@ function Player(props) {
       >
         10
       </div>
-      <div className={`shadow ${showAnimation ? "animated" : ""}`}></div>
+      <div
+        id="shadow"
+        className={`shadow ${showAnimation ? "animated" : ""}`}
+      ></div>
     </div>
   );
 }

@@ -125,6 +125,13 @@ export default function handleMovement(player) {
       }
       timer = setTimeout(() => {
         timer = null;
+        const shadow = document.getElementById("shadow");
+        shadow.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+          inline: "nearest"
+        });
+
         Store.dispatch({
           type: "IS_ANIMATED",
           payload: {
