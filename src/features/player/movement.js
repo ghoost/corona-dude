@@ -127,8 +127,8 @@ export default function handleMovement(player) {
           Store.dispatch({
             type: "SET_MOVES",
             payload: {
-              moveCount: moves - 10,
-              addScore: -10,
+              moveCount: moves - 5,
+              addScore: -5,
               showAnimation: true,
               gameOver: gameOver
             }
