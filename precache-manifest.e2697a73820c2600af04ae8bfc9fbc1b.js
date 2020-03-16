@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5c896f03b5865a6c0628e815a6b61a36",
+    "revision": "bca4e002f90cf42d0bff687425c07b58",
     "url": "/corona-dude/index.html"
   },
   {
-    "revision": "3096886eb3fe10e1830a",
-    "url": "/corona-dude/static/css/main.bd36cb79.chunk.css"
+    "revision": "f476d9c53857b954da00",
+    "url": "/corona-dude/static/css/main.138c9ca4.chunk.css"
   },
   {
-    "revision": "7080e8ed0d5995d7fcca",
-    "url": "/corona-dude/static/js/2.1b6b7b77.chunk.js"
+    "revision": "22ef1741886ec701a111",
+    "url": "/corona-dude/static/js/2.35d1474b.chunk.js"
   },
   {
     "revision": "0bdc4f0d8b3d84ae6a73bb9902b479ee",
-    "url": "/corona-dude/static/js/2.1b6b7b77.chunk.js.LICENSE.txt"
+    "url": "/corona-dude/static/js/2.35d1474b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3096886eb3fe10e1830a",
-    "url": "/corona-dude/static/js/main.109d4579.chunk.js"
+    "revision": "f476d9c53857b954da00",
+    "url": "/corona-dude/static/js/main.5bbddf38.chunk.js"
   },
   {
     "revision": "aee6a942745300646071",
