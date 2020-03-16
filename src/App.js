@@ -20,7 +20,8 @@ function App() {
   };
 
   Store.dispatch({ type: "ADD_TILES", payload: { tiles: Levels["level1"] } });
-  const handleClick = direction => {
+  const handleClick = (event, direction) => {
+    console.log(event);
     switch (direction) {
       case "DOWN":
         window.dispatchEvent(new KeyboardEvent("keydown", { keyCode: 40 }));
@@ -43,17 +44,29 @@ function App() {
         <>
           <World />
           <div className="keypad">
-            <button onClick={() => handleClick("UP")}>
+            <button
+              onMouseDown={e => handleClick(e, "UP")}
+              onMouseUp={e => handleClick(e, "UP")}
+            >
               <i className="up"></i>
             </button>
             <br />
-            <button onClick={() => handleClick("LEFT")}>
+            <button
+              onMouseDown={e => handleClick(e, "LEFT")}
+              onMouseUp={e => handleClick(e, "LEFT")}
+            >
               <i className="left"></i>
             </button>
-            <button onClick={() => handleClick("DOWN")}>
+            <button
+              onMouseDown={e => handleClick(e, "DOWN")}
+              onMouseUp={e => handleClick(e, "DOWN")}
+            >
               <i className="down"></i>
             </button>
-            <button onClick={() => handleClick("RIGHT")}>
+            <button
+              onMouseDown={e => handleClick(e, "RIGHT")}
+              onMouseUp={e => handleClick(e, "RIGHT")}
+            >
               <i className="right"></i>
             </button>
           </div>

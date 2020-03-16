@@ -11,6 +11,8 @@ function getTileSprite(type) {
       return "grave";
     case 3:
       return "spiral";
+    case 4:
+      return "toilet";
     case 5:
       return "farm";
     case 6:

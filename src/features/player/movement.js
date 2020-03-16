@@ -76,6 +76,7 @@ export default function handleMovement(player) {
           type: "SET_MOVES",
           payload: {
             moveCount: 0,
+            addScore: 0,
             showAnimation: true,
             gameOver: gameOver
           }
@@ -107,6 +108,27 @@ export default function handleMovement(player) {
             type: "SET_MOVES",
             payload: {
               moveCount: moves + 10,
+              showAnimation: true,
+              addScore: 10,
+              gameOver: gameOver
+            }
+          });
+          Store.dispatch({ type: "ADD_TILES", payload: { tiles: newTiles } });
+        }
+      }
+
+      if (tile === 4) {
+        const newTiles = produce(Store.getState().map.tiles, draft => {
+          const y = newPos[1] / SPRITE_SIZE;
+          const x = newPos[0] / SPRITE_SIZE;
+          draft[y][x] = 0;
+        });
+        if (newTiles) {
+          Store.dispatch({
+            type: "SET_MOVES",
+            payload: {
+              moveCount: moves - 10,
+              addScore: -10,
               showAnimation: true,
               gameOver: gameOver
             }

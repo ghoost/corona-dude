@@ -38,6 +38,9 @@
 .cave {
   background-image: url("/corona-dude/cave.png");
 }
+.toilet {
+  background-image: url("/corona-dude/toilet.png");
+}
 .grave {
   background-image: url("/corona-dude/tiles/pipo-map001.png");
   background-position: 120px -120px;

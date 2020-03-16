@@ -10,7 +10,9 @@ function Player(props) {
   const animated = useSelector(state => state.player.animated);
   const showAnimation = useSelector(state => state.player.showAnimation);
   const moves = useSelector(state => state.player.moveCount);
+  const addScore = useSelector(state => state.player.addScore);
   let movement = (moves / 10) * 100;
+  console.log(addScore);
   const Moves = () => {
     return (
       <div
@@ -51,7 +53,7 @@ function Player(props) {
       <div
         className={`add-points ${animated && showAnimation ? "animated" : ""}`}
       >
-        10
+        {addScore}
       </div>
       <div
         id="shadow"
